@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A8BC9E371F7832E000F330A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E361F7832E000F330A5 /* AppDelegate.swift */; };
-		A8BC9E391F7832E000F330A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E381F7832E000F330A5 /* ViewController.swift */; };
+		A8BC9E391F7832E000F330A5 /* CategoriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E381F7832E000F330A5 /* CategoriesVC.swift */; };
 		A8BC9E3C1F7832E000F330A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BC9E3A1F7832E000F330A5 /* Main.storyboard */; };
 		A8BC9E3E1F7832E000F330A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8BC9E3D1F7832E000F330A5 /* Assets.xcassets */; };
 		A8BC9E411F7832E000F330A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8BC9E3F1F7832E000F330A5 /* LaunchScreen.storyboard */; };
 		A8BC9E4C1F7832E000F330A5 /* ShoppingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E4B1F7832E000F330A5 /* ShoppingAppTests.swift */; };
 		A8BC9E571F7832E000F330A5 /* ShoppingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E561F7832E000F330A5 /* ShoppingAppUITests.swift */; };
+		A8BC9E651F783A3000F330A5 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BC9E641F783A3000F330A5 /* CategoriesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		A8BC9E331F7832E000F330A5 /* ShoppingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BC9E361F7832E000F330A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8BC9E381F7832E000F330A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A8BC9E381F7832E000F330A5 /* CategoriesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesVC.swift; sourceTree = "<group>"; };
 		A8BC9E3B1F7832E000F330A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8BC9E3D1F7832E000F330A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8BC9E401F7832E000F330A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		A8BC9E521F7832E000F330A5 /* ShoppingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShoppingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8BC9E561F7832E000F330A5 /* ShoppingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingAppUITests.swift; sourceTree = "<group>"; };
 		A8BC9E581F7832E000F330A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8BC9E641F783A3000F330A5 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,10 @@
 		A8BC9E351F7832E000F330A5 /* ShoppingApp */ = {
 			isa = PBXGroup;
 			children = (
+				A8BC9E681F783A4100F330A5 /* Model */,
+				A8BC9E671F783A3B00F330A5 /* View */,
+				A8BC9E661F783A3500F330A5 /* Controller */,
 				A8BC9E361F7832E000F330A5 /* AppDelegate.swift */,
-				A8BC9E381F7832E000F330A5 /* ViewController.swift */,
 				A8BC9E3A1F7832E000F330A5 /* Main.storyboard */,
 				A8BC9E3D1F7832E000F330A5 /* Assets.xcassets */,
 				A8BC9E3F1F7832E000F330A5 /* LaunchScreen.storyboard */,
@@ -123,6 +127,29 @@
 				A8BC9E581F7832E000F330A5 /* Info.plist */,
 			);
 			path = ShoppingAppUITests;
+			sourceTree = "<group>";
+		};
+		A8BC9E661F783A3500F330A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A8BC9E381F7832E000F330A5 /* CategoriesVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A8BC9E671F783A3B00F330A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A8BC9E641F783A3000F330A5 /* CategoriesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8BC9E681F783A4100F330A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8BC9E391F7832E000F330A5 /* ViewController.swift in Sources */,
+				A8BC9E651F783A3000F330A5 /* CategoriesCell.swift in Sources */,
+				A8BC9E391F7832E000F330A5 /* CategoriesVC.swift in Sources */,
 				A8BC9E371F7832E000F330A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
