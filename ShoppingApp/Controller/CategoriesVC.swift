@@ -14,14 +14,27 @@ class CategoriesVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        categoryTableView.delegate = self
+        categoryTableView.dataSource = self
+    }
+}
+
+extension CategoriesVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataService.instance.getCategories().count
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ReusableCell.categoryCell.rawValue) as? CategoriesCell else {
+            return CategoriesCell()
+        }
+        let category = DataService.instance.getCategories()[indexPath.row]
+        cell.configCell(category: category)
+        return cell
     }
 
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 180
+    }
 }
 
