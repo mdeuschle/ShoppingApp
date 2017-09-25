@@ -10,6 +10,11 @@ import Foundation
 
 enum ReusableCell: String {
     case categoryCell = "categoryCell"
+    case productCell = "productCell"
+}
+
+enum SegueString: String {
+    case toDetailVC = "toDetailVC"
 }
 
 
